@@ -3,6 +3,7 @@ import Card from "./components/Card/Card";
 import Search from "./components/Search/Search";
 import TestsC from "./components/TestsC/TestsC";
 import axios from "axios";
+import $ from "jquery";
 import "./App.scss";
 
 function App() {
@@ -54,19 +55,40 @@ function App() {
       });
     }
   };
-  /*   const onClickHandler = () => {
-    setLocation(city);
-    getData();
-  };
- */
+  function deleteWidgetClasses() {
+    document.querySelector("#widget").className = "";
+  }
+  if (weatherInfo.current) {
+    const background = "rain";
+    if (weatherInfo.current.condition.text.includes("cloudy")) {
+      deleteWidgetClasses();
+      document.querySelector("#widget").classList.add("cloudy");
+    } else if (weatherInfo.current.condition.text.includes("Sunny")) {
+      deleteWidgetClasses();
+      document.querySelector("#widget").classList.add("sunny");
+    } else if (weatherInfo.current.condition.text.includes("snow")) {
+      deleteWidgetClasses();
+      document.querySelector("#widget").classList.add("snow");
+    } else if (weatherInfo.current.condition.text.includes("rain")) {
+      deleteWidgetClasses();
+      document.querySelector("#widget").classList.add("rain");
+    } else if (weatherInfo.current.condition.text.includes("storm")) {
+      deleteWidgetClasses();
+      document.querySelector("#widget").classList.add("storm");
+    }
+  }
+
   return (
     <div className="App">
-      <Search
-        city={city}
-        setCity={setCity}
-        location={location}
-        setLocation={setLocation}
-      />
+      <div id="widget" className="">
+        <Search
+          city={city}
+          setCity={setCity}
+          location={location}
+          setLocation={setLocation}
+        />
+        <TestsC weatherInfo={weatherInfo} />
+      </div>
       {/* <Card weatherInfo={weatherInfo} /> */}
       {/* <input
         type="text"
@@ -77,7 +99,6 @@ function App() {
         onChange={(e) => setCity(e.target.value)}
       ></input> */}
 
-      <TestsC weatherInfo={weatherInfo} />
       {/*  <Card weatherInfo={weatherInfo} /> */}
     </div>
   );

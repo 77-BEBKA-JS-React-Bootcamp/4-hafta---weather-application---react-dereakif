@@ -1,0 +1,43 @@
+.forecast {
+  display: flex;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: space-around;
+  .day {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+  }
+  .day-name {
+    font-weight: 600;
+  }
+
+  .highTemp {
+    font-weight: 500;
+    line-height: 2.5rem;
+  }
+  .lowTemp {
+    color: rgb(88, 88, 88);
+    font-weight: 300;
+    line-height: 1rem;
+  }
+}
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, 0);
+  }
+
+  80% {
+    transform: translate(-5px, 0);
+  }
+}
+.condition-icon {
+  animation: nudge 5s linear infinite alternate;
+}

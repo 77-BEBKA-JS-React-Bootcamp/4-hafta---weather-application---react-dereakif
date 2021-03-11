@@ -1,0 +1,26 @@
+#widget {
+  margin: 5vmax auto;
+  padding: 20px 30px;
+  max-width: 500px;
+  border-radius: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.cloudy {
+  background-image: linear-gradient(0deg, #bbdefb, #2196f3);
+}
+
+.sunny {
+  background-image: linear-gradient(0deg, #b3e5fc, #29b6f6);
+}
+
+.snow {
+  background-image: linear-gradient(0deg, #b2ebf2, #26c6da);
+}
+
+.rain {
+  background-image: linear-gradient(0deg, #c5cae9, #5c6bc0);
+}
+
+.storm {
+  background-image: linear-gradient(0deg, #e0e0e0, #757575);
+}

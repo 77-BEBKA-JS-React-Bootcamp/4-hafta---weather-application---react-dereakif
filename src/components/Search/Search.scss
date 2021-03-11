@@ -1,3 +1,9 @@
+.heading {
+  color: whitesmoke;
+  text-align: center;
+  margin: 0 0 3rem;
+  font-weight: 400;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -22,10 +28,13 @@
     align-items: flex-start;
     background-color: transparent;
     border: none;
-    color: black;
+    color: white;
     font-size: 2rem;
     max-width: max-content;
     outline: none;
     padding-left: 0.5rem;
+    &::placeholder {
+      color: whitesmoke;
+    }
   }
 }
