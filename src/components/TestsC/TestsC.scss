@@ -1,0 +1,42 @@
+.testing {
+  border: red solid 2px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.temp-today {
+  display: flex;
+  color: #333;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 0.85;
+}
+.cels {
+  font-size: 2rem;
+}
+.info-today {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 0 0 0.8rem;
+  order: 1;
+  .date-today,
+  .location {
+    font-size: 1.15rem;
+    margin: 0 0 0.3rem 0;
+    text-align: start;
+  }
+  .condition-today {
+    font-size: 0.7rem;
+    color: #333;
+    margin: 0 0 0.4rem 0;
+    text-align: start;
+  }
+  .max-min {
+    display: flex;
+  }
+  .max-today {
+    margin: 0 1rem 0 -0.1rem;
+  }
+}
