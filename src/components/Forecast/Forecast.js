@@ -1,10 +1,14 @@
 import "./Forecast.scss";
 import dayjs from "dayjs";
 
-function Forecast({ weatherInfo }) {
+function Forecast({ weatherInfo, forecast, setForecast }) {
+  const clickHandler = (e) => {
+    setForecast(e.target.parentNode.id);
+  };
+
   return (
     <div className="forecast">
-      <div class="day ">
+      <div id="dayZero" class="day" onClick={clickHandler}>
         <div className="day-name">Today</div>
         <img
           className="condition-icon"
@@ -24,7 +28,7 @@ function Forecast({ weatherInfo }) {
           °C
         </span>
       </div>
-      <div className="day">
+      <div id="dayOne" className="day" onClick={clickHandler}>
         <div className="day-name">
           {weatherInfo.forecast &&
             dayjs(`${weatherInfo.forecast.forecastday[1].date}`).format("dddd")}
@@ -48,7 +52,7 @@ function Forecast({ weatherInfo }) {
           °C
         </span>
       </div>
-      <div className="day">
+      <div id="dayTwo" className="day" onClick={clickHandler}>
         <div className="day-name">
           {weatherInfo.forecast &&
             dayjs(`${weatherInfo.forecast.forecastday[2].date}`).format("dddd")}

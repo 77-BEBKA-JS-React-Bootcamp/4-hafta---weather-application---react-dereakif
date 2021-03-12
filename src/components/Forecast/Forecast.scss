@@ -5,10 +5,20 @@
   margin: 0 auto;
   justify-content: space-around;
   .day {
+    border: 2px solid white;
+    border-radius: 1rem;
+    padding: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
     line-height: 1.5rem;
+    &:hover {
+      border: 2px solid white;
+      transition: all 0.3s ease;
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
   }
   .day-name {
     font-weight: 600;
@@ -39,5 +49,5 @@
   }
 }
 .condition-icon {
-  animation: nudge 5s linear infinite alternate;
+  animation: nudge 10s linear infinite alternate;
 }
