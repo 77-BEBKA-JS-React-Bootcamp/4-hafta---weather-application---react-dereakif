@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${params.key}&q=${params.location}&days=4`
+        `https://api.weatherapi.com/v1/forecast.json?key=${params.key}&q=${params.location}&days=4`
       )
       .then((resp) => {
         setWeatherInfo(resp.data);
