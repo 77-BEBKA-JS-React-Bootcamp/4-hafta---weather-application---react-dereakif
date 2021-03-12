@@ -10,7 +10,7 @@ function Search({ city, setCity, setLocation, onClickHandler }) {
             type="text"
             placeholder="Search for a city"
             onKeyDown={(e) => {
-              e.key == "Enter" && setLocation(city);
+              e.key === "Enter" && setLocation(city);
             }}
             onChange={(e) => setCity(e.target.value)}
           ></input>

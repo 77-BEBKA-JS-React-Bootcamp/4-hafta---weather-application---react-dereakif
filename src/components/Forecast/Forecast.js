@@ -11,6 +11,7 @@ function Forecast({ weatherInfo, forecast, setForecast }) {
       <div id="dayZero" class="day" onClick={clickHandler}>
         <div className="day-name">Today</div>
         <img
+          alt="codition-icon"
           className="condition-icon"
           src={
             weatherInfo.forecast &&
@@ -34,6 +35,7 @@ function Forecast({ weatherInfo, forecast, setForecast }) {
             dayjs(`${weatherInfo.forecast.forecastday[1].date}`).format("dddd")}
         </div>
         <img
+          alt="codition-icon"
           className="condition-icon"
           src={
             weatherInfo.forecast &&
@@ -58,6 +60,7 @@ function Forecast({ weatherInfo, forecast, setForecast }) {
             dayjs(`${weatherInfo.forecast.forecastday[2].date}`).format("dddd")}
         </div>
         <img
+          alt="codition-icon"
           className="condition-icon"
           src={
             weatherInfo.forecast &&

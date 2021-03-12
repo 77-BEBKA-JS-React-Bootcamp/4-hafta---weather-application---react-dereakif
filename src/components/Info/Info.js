@@ -6,15 +6,14 @@ import "./Info.scss";
 function TestsC({ weatherInfo, forecast, setForecast }) {
   let i = 0;
   switch (forecast) {
-    case "dayZero":
-      i = 0;
-      break;
     case "dayOne":
       i = 1;
       break;
     case "dayTwo":
       i = 2;
       break;
+    default:
+      i = 0;
   }
   function deleteWidgetClasses() {
     document.querySelector("#widget").className = "";
@@ -55,7 +54,7 @@ function TestsC({ weatherInfo, forecast, setForecast }) {
     <>
       <div className="main">
         <div className="temp-today">
-          {weatherInfo.current && i == 0
+          {weatherInfo.current && i === 0
             ? Math.round(weatherInfo.current.temp_c)
             : weatherInfo.forecast &&
               Math.round(weatherInfo.forecast.forecastday[i].day.avgtemp_c)}
