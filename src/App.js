@@ -10,12 +10,11 @@ function App() {
   const [city, setCity] = useState("");
   const [forecast, setForecast] = useState("dayZero");
 
-  const params = {
-    key: "f86435eef77c4a73bfc94342210703",
-    location,
-  };
-
   useEffect(() => {
+    const params = {
+      key: "f86435eef77c4a73bfc94342210703",
+      location,
+    };
     axios
       .get(
         `https://api.weatherapi.com/v1/forecast.json?key=${params.key}&q=${params.location}&days=4`
