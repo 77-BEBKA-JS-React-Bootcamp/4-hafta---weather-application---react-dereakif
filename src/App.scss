@@ -1,8 +1,11 @@
+html,
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; //horizontal
+  overflow-y: scroll; //vertical
 }
 #widget {
-  margin: 5vmax auto;
+  touch-action: none;
+  margin: 10vmax auto;
   padding: 20px 30px;
   max-width: 500px;
   border-radius: 1rem;
